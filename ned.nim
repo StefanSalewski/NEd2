@@ -367,7 +367,7 @@ proc activateOrOpen(app: Application) =
   window.insertActionGroup("win", actionGroup)
   var builder = newBuilderFromString(menuData)
   var menuModel: gio.MenuModel = builder.getMenuModel("menuModel")
-  var menu = newPopoverMenuFromModel(menuModel)
+  var menu = newPopoverMenu(menuModel)
   menuButton.setPopover(menu)
   menuButton.setIconName("open-menu-symbolic") 
   header.packEnd(menuButton) 
